@@ -19,8 +19,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
         "Address":{"id":101,"plotNo":"70 A", "area":"mansarovar",number:[]} // json object,
         "courses":["java","python"],
         "courses":[{"id":201,"name":"java"},{"id":202,"name":"python"}],
-
-
     }
     2. reference
     "user":{
@@ -33,9 +31,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
                 referece:101
 
     }
-
-
-
 
  */
 

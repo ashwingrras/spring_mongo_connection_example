@@ -11,7 +11,7 @@ public class MongoConfig {
 
     @Bean
     public MongoClient mongoClient() {
-        return MongoClients.create("mongodb+srv://ashwanibelani10:ApdMVirmJ4GZ1JYF@cluster0.sknkbv5.mongodb.net/?appName=Cluster0");
+        return MongoClients.create("mongodb+srv://ashwanibelani10:@cluster0.sknkbv5.mongodb.net/?appName=Cluster0");
     }
 
     @Bean
