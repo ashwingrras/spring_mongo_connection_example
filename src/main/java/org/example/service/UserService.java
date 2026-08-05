@@ -3,6 +3,7 @@ package org.example.service;
 import org.example.model.User;
 import org.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +19,8 @@ public class UserService {
     }
 
     public List<User> getAllUsers() {
-        return repository.findAll();
+        return repository.findAll(Sort.by(Sort.Direction.DESC,"salary"));
+        //Sort.by(Sort.Direction.DESC,"salary")
     }
 
     public User getUser(String id) {

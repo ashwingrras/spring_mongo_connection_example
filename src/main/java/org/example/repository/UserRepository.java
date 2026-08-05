@@ -2,6 +2,7 @@ package org.example.repository;
 
 import org.example.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -19,7 +20,7 @@ public class UserRepository {
     }
 
     // READ ALL
-    public List<User> findAll() {
+    public List<User> findAll(Sort salary) {
         return mongoTemplate.findAll(User.class);
     }
 

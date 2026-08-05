@@ -7,6 +7,14 @@ import jakarta.validation.constraints.*;
 import java.util.Date;
 import java.util.List;
 
+
+/*
+
+        DBRef
+        DocumentRef
+
+ */
+
 @Document(collection = "users")
 @CompoundIndexes({
         @CompoundIndex(name = "email_age_idx", def = "{'email': 1, 'age': -1}")

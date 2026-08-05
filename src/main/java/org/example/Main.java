@@ -32,6 +32,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
     }
 
+
+    spring mongo annotations:
+    1. Document
+    2. ID
+
  */
 
 
@@ -45,17 +50,20 @@ public class Main {
         UserService service = context.getBean(UserService.class);
 
         // CREATE
-        User user = new User("Ashu", "ashu99_97@gmail.com", 22);
+        User user = new User("Sourabh", "sourabh@gmail.com", 28,"abcd", 75000.0);
         service.createUser(user);
+
+        User user2 = new User("Pawan", "pawan@gmail.com", 26,"abcd", 82000.0);
+        service.createUser(user2);
 
         // READ
         System.out.println("All Users:");
         service.getAllUsers().forEach(u ->
-                System.out.println(u.getName()));
+                System.out.println("name : "+u.getName() +" , email "+u.getEmail() +", salary "+u.getSalary()));
 
         // UPDATE
-        user.setAge(30);
-        service.updateUser(user);
+        //user.setAge(30);
+        //service.updateUser(user);
 
     }
 }

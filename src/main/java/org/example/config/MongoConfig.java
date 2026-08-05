@@ -11,11 +11,11 @@ public class MongoConfig {
 
     @Bean
     public MongoClient mongoClient() {
-        return MongoClients.create("mongodb+srv://ashwanibelani10:@cluster0.sknkbv5.mongodb.net/?appName=Cluster0");
+        return MongoClients.create("mongodb+srv://java_mongo:GuzdSEbcPJuZgfsp@cluster0.sknkbv5.mongodb.net/?appName=Cluster0");
     }
 
     @Bean
     public MongoTemplate mongoTemplate() {
-        return new MongoTemplate(mongoClient(), "testgrrasdb");
+        return new MongoTemplate(mongoClient(), "grras_5pm");
     }
 }
